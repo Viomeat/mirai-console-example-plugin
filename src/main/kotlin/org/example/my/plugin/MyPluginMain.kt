@@ -27,7 +27,7 @@ import net.mamoe.mirai.message.data.Image
 import net.mamoe.mirai.utils.info
 import net.mamoe.mirai.event.globalEventChannel
 import net.mamoe.mirai.event.events.GroupMessageEvent
-import net.mamoe.mirai.message.data.contentToString
+import net.mamoe.mirai.message.data.*
 
 /*
 // 定义主类方法 1, 显式提供信息
