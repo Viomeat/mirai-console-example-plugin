@@ -25,6 +25,9 @@ import net.mamoe.mirai.console.util.scopeWith
 import net.mamoe.mirai.contact.Member
 import net.mamoe.mirai.message.data.Image
 import net.mamoe.mirai.utils.info
+import net.mamoe.mirai.event.globalEventChannel
+import net.mamoe.mirai.event.events.GroupMessageEvent
+import net.mamoe.mirai.message.data.contentToString
 
 /*
 // 定义主类方法 1, 显式提供信息
@@ -60,6 +63,13 @@ object MyPluginMain : KotlinPlugin(
         MySimpleCommand.register() // 注册指令
 
         PERMISSION_EXECUTE_1 // 初始化, 注册权限
+
+        // 监听群消息
+        globalEventChannel().subscribeAlways<GroupMessageEvent> { event ->
+            if (event.group.id == 655344109L && event.message.contentToString() == "喵喵") {
+                event.group.sendMessage("喵")
+            }
+        }
     }
 
     override fun onDisable() {
