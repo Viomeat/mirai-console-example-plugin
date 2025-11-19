@@ -5,7 +5,7 @@ plugins {
 
     id("net.mamoe.mirai-console") version "2.16.0"
     id("com.github.johnrengelman.shadow") version "8.1.1"
-    `maven-publish`
+    id("maven-publish")
 }
 
 mirai {
