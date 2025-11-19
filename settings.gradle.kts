@@ -5,5 +5,5 @@ pluginManagement {
         gradlePluginPortal()
     }
 }
-rootProject.name = "mirai-console-example-plugin"
+rootProject.name = "RaukaRur-bot"
 
